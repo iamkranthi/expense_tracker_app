@@ -5,9 +5,5 @@ Widget verticalSpacer(double height) {
 }
 
 Widget horizontalSpacer(double width) {
-  return SizedBox(height: width);
-}
-
-Widget iconContainer() {
-  return Container();
+  return SizedBox(width: width);
 }

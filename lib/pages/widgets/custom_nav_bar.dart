@@ -27,7 +27,6 @@ class _CustomNavBarState extends State<CustomNavBar> {
           activeColor: Colors.black,
           tabBackgroundColor: ConstantColors.iconColor,
           iconSize: 28,
-
           haptic: true,
           style: GnavStyle.google,
           padding: const EdgeInsets.all(20),
@@ -39,20 +38,14 @@ class _CustomNavBarState extends State<CustomNavBar> {
               onPressed: () {},
             ),
             GButton(
-              icon: Icons.search,
+              icon: Iconsax.add,
               text: "search",
               textColor: Colors.black,
               onPressed: () {},
             ),
             GButton(
-              icon: Icons.access_time_rounded,
+              icon: CupertinoIcons.graph_square_fill,
               text: "axess",
-              onPressed: () {},
-              textColor: Colors.black,
-            ),
-            GButton(
-              icon: Icons.toc_outlined,
-              text: "profile",
               onPressed: () {},
               textColor: Colors.black,
             ),
