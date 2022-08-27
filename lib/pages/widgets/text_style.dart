@@ -1,3 +1,4 @@
+//TODO change text with respect to screen size using media query
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -6,6 +7,7 @@ TextStyle get headingStyle {
     textStyle: const TextStyle(
       fontSize: 32,
       fontWeight: FontWeight.bold,
+      color: Colors.white70,
     ),
   );
 }
@@ -22,9 +24,18 @@ TextStyle get subHeadingStyle {
 TextStyle get iconHeadingStyle {
   return GoogleFonts.notoSans(
     textStyle: const TextStyle(
-      fontSize: 18,
-      fontWeight: FontWeight.w700,
-      color: Colors.green,
+      fontSize: 22,
+      fontWeight: FontWeight.bold,
+      color: Colors.blueGrey,
+    ),
+  );
+}
+
+TextStyle get tasktextStyle {
+  return GoogleFonts.roboto(
+    textStyle: const TextStyle(
+      fontSize: 15,
+      color: Colors.black,
     ),
   );
 }

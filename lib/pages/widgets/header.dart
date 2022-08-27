@@ -17,42 +17,33 @@ class Header extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              //!navgation
-              //*print("menu");
+              //TODO Add sidebar page
             },
-            child: Material(
-              elevation: 15,
-              child: ClayContainer(
-                depth: 20,
-                spread: 0.8,
-                surfaceColor: ConstantColors.iconColor,
-                height: 48,
-                width: 50,
-                parentColor: Colors.white,
-                curveType: CurveType.convex,
-                // borderRadius: 20,
-
-                child: Icon(firstIcon),
-              ),
+            child: ClayContainer(
+              depth: 20,
+              spread: 0.8,
+              surfaceColor: Colors.black,
+              height: 48,
+              width: 50,
+              parentColor: Colors.white,
+              borderRadius: 20,
+              child: Icon(firstIcon),
             ),
           ),
           verticalSpacer(14),
           GestureDetector(
             onTap: () {
-              //!navgation
-              //*print("notifications");
+              //TODO Add notification page
             },
-            child: Material(
-              elevation: 15,
-              child: ClayContainer(
-                depth: 20,
-                spread: 0.8,
-                surfaceColor: ConstantColors.iconColor,
-                height: 48,
-                width: 50,
-                parentColor: Colors.white,
-                child: Icon(secondIcon),
-              ),
+            child: ClayContainer(
+              depth: 20,
+              spread: 0.8,
+              surfaceColor: Colors.black,
+              height: 48,
+              width: 50,
+              parentColor: Colors.white,
+              borderRadius: 20,
+              child: Icon(secondIcon),
             ),
           ),
         ],
