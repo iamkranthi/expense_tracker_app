@@ -1,16 +1,42 @@
-# expense_tracker_app
+// class CardsLayout extends StatelessWidget {
+//   const CardsLayout({
+//     Key? key,
+//     required PageController controller,
+//   })  : _controller = controller,
+//         super(key: key);
 
-A new Flutter project.
+//   final PageController _controller;
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       height: 200,
+//       child: PageView(
+//         scrollDirection: Axis.horizontal,
+//         controller: _controller,
+//         children: const [
+//           CustomCard(
+//             cardnumber: '58XX XXXX XXXX XX76',
+//             cvv: 565,
+//             expdate: '10/23',
+//           ),
+//           CustomCard(
+//             cardnumber: '58XX XXXX XXXX XX76',
+//             cvv: 565,
+//             expdate: '10/23',
+//           ),
+//           CustomCard(
+//             cardnumber: '58XX XXXX XXXX XX76',
+//             cvv: 565,
+//             expdate: '10/23',
+//           ),
+//           CustomCard(
+//             cardnumber: '58XX XXXX XXXX XX76',
+//             cvv: 565,
+//             expdate: '10/23',
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }

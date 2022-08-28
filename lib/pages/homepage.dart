@@ -19,18 +19,62 @@ class _HomepageState extends State<Homepage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           verticalSpacer(60),
-          const Header(
-              firstIcon: Iconsax.menu, secondIcon: Iconsax.notification),
-          verticalSpacer(10),
-          const WelcomeText(text1: "Dashboard"),
-          verticalSpacer(10),
-          const Icontext(text1: "Cards"),
-          verticalSpacer(6),
-          CardsLayout(controller: _controller),
+         const CustomAppBAr(),
+          verticalSpacer(25),
+          const Icontext(text1: "UPI id's "),
+          verticalSpacer(18),
+          UpicardScroller(
+            controller: _controller,
+          ),
           verticalSpacer(10),
           SmoothController(controller: _controller),
-          verticalSpacer(15),
+          verticalSpacer(25),
           const TaskBarItems(),
+        ],
+      ),
+    );
+  }
+}
+
+class UpicardScroller extends StatelessWidget {
+  const UpicardScroller({
+    Key? key,
+    required PageController controller,
+  })  : _controller = controller,
+        super(key: key);
+
+  final PageController _controller;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return SizedBox(
+      height: size.height / 10,
+      width: size.width / 1.09,
+      child: PageView(
+        controller: _controller,
+        children: [
+          const UpiCards(
+            upiIcon: 'assets/images/google-pay-icon.png',
+            upiName: "Gpay",
+            upiId: "8712325133@okhdfc",
+            color: Colors.white,
+          ),
+          UpiCards(
+            upiIcon: 'assets/images/phonepe-logo-icon.png',
+            upiId: '8712325133@ybl',
+            upiName: 'Phone pay',
+            color: Colors.purple.shade100,
+          ),
+          const UpiCards(
+              upiIcon: 'assets/images/paytm-icon.png',
+              upiName: 'paytm',
+              upiId: '8712325133@paytm'),
+          const UpiCards(
+              upiIcon: 'assets/images/amazon_pay_logo.png',
+              upiId: '8712325133@ybl',
+              upiName: 'amazon pay',
+              color: Colors.white),
         ],
       ),
     );
@@ -51,9 +95,9 @@ class TaskBarItems extends StatelessWidget {
             // TODO add expense page
           },
           child: const TaskBarWidgets(
-        
             ticon: Icons.send,
-            title: 'Expenses', taskCardcolor: Colors.yellow,
+            title: 'Expenses',
+            taskCardcolor: Colors.yellow,
           ),
         ),
         GestureDetector(
@@ -61,55 +105,12 @@ class TaskBarItems extends StatelessWidget {
             //  TODO add expense page
           },
           child: const TaskBarWidgets(
-           
             title: 'Income',
-            ticon: Icons.account_balance_wallet, taskCardcolor: Colors.greenAccent,
+            ticon: Icons.account_balance_wallet,
+            taskCardcolor: Colors.greenAccent,
           ),
         ),
       ],
-    );
-  }
-}
-
-class CardsLayout extends StatelessWidget {
-  const CardsLayout({
-    Key? key,
-    required PageController controller,
-  })  : _controller = controller,
-        super(key: key);
-
-  final PageController _controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200,
-      child: PageView(
-        scrollDirection: Axis.horizontal,
-        controller: _controller,
-        children: const [
-          CustomCard(
-            cardnumber: '58XX XXXX XXXX XX76',
-            cvv: 565,
-            expdate: '10/23',
-          ),
-          CustomCard(
-            cardnumber: '58XX XXXX XXXX XX76',
-            cvv: 565,
-            expdate: '10/23',
-          ),
-          CustomCard(
-            cardnumber: '58XX XXXX XXXX XX76',
-            cvv: 565,
-           expdate: '10/23',
-          ),
-          CustomCard(
-            cardnumber: '58XX XXXX XXXX XX76',
-            cvv: 565,
-            expdate: '10/23',
-          ),
-        ],
-      ),
     );
   }
 }
@@ -129,7 +130,7 @@ class SmoothController extends StatelessWidget {
       child: SmoothPageIndicator(
         controller: _controller,
         count: 4,
-        effect:  ExpandingDotsEffect(
+        effect: ExpandingDotsEffect(
           dotColor: Colors.lightBlue.shade200,
           activeDotColor: Colors.white,
           spacing: 6,

@@ -1,4 +1,4 @@
-export 'package:expense_tracker_app/pages/widgets/header.dart';
+export 'package:expense_tracker_app/pages/widgets/custom_app_bar.dart';
 export 'package:expense_tracker_app/pages/homepage.dart';
 export  'package:expense_tracker_app/themes/theme_constants.dart';
 export 'package:iconsax/iconsax.dart';

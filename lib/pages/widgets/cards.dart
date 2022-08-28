@@ -1,69 +1,64 @@
 import 'package:expense_tracker_app/export/exports.dart';
+import 'package:flutter/material.dart';
 
-class CustomCard extends StatelessWidget {
-  final String cardnumber;
-  final String expdate;
-  final int cvv;
-
-  const CustomCard({
-    Key? key,
-    required this.cardnumber,
-    required this.expdate,
-    required this.cvv,
-  }) : super(key: key);
+class UpiCards extends StatelessWidget {
+  final String upiIcon;
+  final String upiName;
+  final String upiId;
+  final color;
+  const UpiCards(
+      {Key? key,
+      required this.upiIcon,
+      required this.upiName,
+      required this.upiId, this.color})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 18),
-      padding: const EdgeInsets.only(left: 13, right: 18, top: 6),
-      height: size.height / 20,
-      decoration: BoxDecoration(
-        color: ConstantColors.cardColor,
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("Card number", style: subHeadingStyle),
-              SizedBox(
-                height: size.height / 18,
-                width: size.width / 6,
-                child: const Image(
-                  image: NetworkImage(
-                    'https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png',
-                  ),
-                ),
-              ),
-            ],
+    return Stack(
+      children: [
+        Card(
+          color: color,
+          margin: const EdgeInsets.only(left: 48),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          child: SizedBox(
+            height: size.height / 11,
+            width: size.width / 1,
           ),
-          verticalSpacer(10),
-          Row(
-            children: [
-              Text(cardnumber),
-            ],
+        ),
+        Positioned(
+          left: size.height / 10,
+          top: 5,
+          child: Text(upiName, style: upiIdNameStyle),
+        ),
+        Positioned(
+          left: size.height / 6.8,
+          top: 32,
+          child: Text(upiId, style: upiIdStyle),
+        ),
+        Positioned(
+          left: size.height / 28,
+          top: 6,
+          child: SizedBox(
+            height: size.height / 13,
+            width: size.width / 13,
+            child: Image.asset(upiIcon),
           ),
-          verticalSpacer(35),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              Text("Expiry date"),
-              Text("CVV"),
-            ],
-          ),
-          verticalSpacer(10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(expdate),
-              Text(cvv.toString()),
-            ],
-          ),
-        ],
-      ),
+        ),
+        Positioned(
+          right: size.height / 160,
+          top: 18,
+          child:
+              const Icon(CupertinoIcons.doc_on_clipboard, color: Colors.black),
+        ),
+        Positioned(
+          top: 60,
+          right: size.height / 50,
+          child: const Text("Tap to copy"),
+        ),
+      ],
     );
   }
 }
