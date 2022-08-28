@@ -12,3 +12,7 @@ export 'package:expense_tracker_app/pages/widgets/custom_nav_bar.dart';
 export 'package:expense_tracker_app/pages/widgets/welcome_text.dart';
 export 'package:smooth_page_indicator/smooth_page_indicator.dart';
 export 'package:expense_tracker_app/pages/widgets/task_bar_widget.dart';
+export 'package:expense_tracker_app/models/upi_card_scroller.dart';
+export 'package:expense_tracker_app/models/task_bar_items.dart';
+export 'package:expense_tracker_app/models/smooth_controller.dart';
+export 'package:expense_tracker_app/models/recent_transcation_model.dart';

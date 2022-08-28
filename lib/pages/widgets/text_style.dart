@@ -33,7 +33,7 @@ TextStyle get tasktextStyle {
     ),
   );
 }
-
+//*used
 TextStyle get upiIdNameStyle {
   return GoogleFonts.lato(
     textStyle: const TextStyle(
@@ -43,7 +43,7 @@ TextStyle get upiIdNameStyle {
     ),
   );
 }
-
+//*used
 TextStyle get upiIdStyle {
   return GoogleFonts.lato(
     textStyle: const TextStyle(
@@ -54,4 +54,24 @@ TextStyle get upiIdStyle {
     ),
   );
 }
-// Chau Philomene One
+
+TextStyle get rHeading {
+  return GoogleFonts.lato(
+    textStyle: const TextStyle(
+      fontSize: 20,
+      color: Colors.black,
+      fontWeight: FontWeight.w600,
+    ),
+  );
+}
+//*used
+TextStyle get rSubtitle {
+  return GoogleFonts.lato(
+    textStyle: const TextStyle(
+      fontSize: 19,
+      color: Colors.black87,
+      fontWeight: FontWeight.w500,
+     
+    ),
+  );
+}
