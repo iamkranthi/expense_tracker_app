@@ -16,3 +16,4 @@ export 'package:expense_tracker_app/models/upi_card_scroller.dart';
 export 'package:expense_tracker_app/models/task_bar_items.dart';
 export 'package:expense_tracker_app/models/smooth_controller.dart';
 export 'package:expense_tracker_app/models/recent_transcation_model.dart';
+export 'package:expense_tracker_app/pages/splash_screen.dart';
