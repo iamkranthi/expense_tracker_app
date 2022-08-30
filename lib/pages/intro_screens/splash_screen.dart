@@ -2,8 +2,25 @@ import 'package:expense_tracker_app/export/exports.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_tracker_app/routes/routes.dart' as route;
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    _navigateOnBoard();
+    super.initState();
+  }
+
+  void _navigateOnBoard() async {
+    await Future.delayed(const Duration(milliseconds: 1500), () {});
+    if (!mounted) return;
+    Navigator.pushNamed(context, route.onboardingpage);
+  }
 
   @override
   Widget build(BuildContext context) {

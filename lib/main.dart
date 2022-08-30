@@ -1,6 +1,7 @@
 import 'package:expense_tracker_app/export/exports.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_tracker_app/routes/routes.dart' as route;
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,9 +15,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'expense tracker',
-      theme:lightTheme,
-    onGenerateRoute: route.controller,
-    initialRoute: route.splashPage,
+      theme: lightTheme,
+      onGenerateRoute: route.controller,
+      initialRoute: route.onboardingpage,
     );
   }
 }

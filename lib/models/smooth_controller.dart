@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class SmoothController extends StatelessWidget {
+  final int count;
   const SmoothController({
     Key? key,
-    required PageController controller,
+    required PageController controller, required this.count,
   })  : _controller = controller,
         super(key: key);
 
@@ -12,15 +13,13 @@ class SmoothController extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SmoothPageIndicator(
-        controller: _controller,
-        count: 4,
-        effect: ExpandingDotsEffect(
-          dotColor: Colors.lightBlue.shade200,
-          activeDotColor: Colors.white,
-          spacing: 6,
-        ),
+    return SmoothPageIndicator(
+      controller: _controller,
+      count: count,
+      effect: ExpandingDotsEffect(
+        dotColor: Colors.lightBlue.shade200,
+        activeDotColor: Colors.white,
+        spacing: 6,
       ),
     );
   }

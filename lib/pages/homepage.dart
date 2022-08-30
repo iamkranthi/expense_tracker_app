@@ -26,7 +26,7 @@ class _HomepageState extends State<Homepage> {
           verticalSpacer(18),
           UpicardScroller(controller: _controller),
           verticalSpacer(10),
-          SmoothController(controller: _controller),
+          Center(child: SmoothController(controller: _controller, count: 4,)),
           verticalSpacer(25),
           const TaskBarItems(),
           verticalSpacer(28),
