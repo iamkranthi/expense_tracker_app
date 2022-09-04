@@ -1,4 +1,5 @@
-import 'package:expense_tracker_app/pages/widgets/text_style.dart';
+import 'package:expense_tracker_app/export/exports.dart';
+//import 'package:expense_tracker_app/pages/widgets/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:expense_tracker_app/routes/routes.dart' as route;
 class LogButton extends StatelessWidget {
@@ -19,7 +20,7 @@ class LogButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(17),
           ),
-          backgroundColor: Colors.white70,
+          backgroundColor: ConstantColors.iconColor,
         ),
         child: Text(
           logs,
