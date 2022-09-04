@@ -23,9 +23,10 @@ class WelcomeText extends StatelessWidget {
 
 class Icontext extends StatelessWidget {
   final String text1;
+  final IconData icon;
   const Icontext({
     Key? key,
-    required this.text1,
+    required this.text1, required this.icon,
   }) : super(key: key);
 
   @override
@@ -36,9 +37,10 @@ class Icontext extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(text1, style: iconHeadingStyle),
-          const Icon(CupertinoIcons.add_circled),
+           Icon(icon),
         ],
       ),
     );
   }
 }
+//CupertinoIcons.add_circled

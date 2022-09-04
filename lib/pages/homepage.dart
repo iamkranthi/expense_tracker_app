@@ -22,7 +22,7 @@ class _HomepageState extends State<Homepage> {
           verticalSpacer(60),
           const CustomAppBAr(),
           verticalSpacer(25),
-          const Icontext(text1: "UPI id's "),
+          const Icontext(text1: "UPI id's ", icon: CupertinoIcons.add_circled,),
           verticalSpacer(18),
           UpicardScroller(controller: _controller),
           verticalSpacer(10),
