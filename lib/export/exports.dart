@@ -20,7 +20,7 @@ export 'package:expense_tracker_app/pages/intro_screens/intro_widgets/intro_page
 export 'package:expense_tracker_app/pages/intro_screens/intro_widgets/intro_page2.dart';
 export 'package:animated_text_kit/animated_text_kit.dart';
 export 'package:lottie/lottie.dart';
-export 'package:expense_tracker_app/pages/intro_screens/intro_widgets/email_input_widget.dart';
+export 'package:expense_tracker_app/pages/intro_screens/intro_widgets/number_input_widget.dart';
 export 'package:expense_tracker_app/pages/intro_screens/intro_widgets/text_field_contanier.dart';
 export 'package:expense_tracker_app/pages/intro_screens/passwd_input_widget.dart';
 export 'package:flutter_signin_button/button_list.dart';

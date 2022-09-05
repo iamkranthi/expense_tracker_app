@@ -23,12 +23,15 @@ class LoginPage extends StatelessWidget {
               const TextFieldContanier(
                 child: PasswdInputWidget(
                   hintText: 'Enter Password',
-                  logicon: CupertinoIcons.lock_circle_fill,
+                  logicon: CupertinoIcons.lock_circle_fill, lasticon: Iconsax.password_check,
                 ),
               ),
               verticalSpacer(22),
-              const LogButton(
-                logs: 'Login',
+              GestureDetector(
+                onTap: ()=> Navigator.pushNamed(context, route.authpage),
+                child: const LogButton(
+                  logs: 'Login',
+                ),
               ),
               verticalSpacer(5),
               const Text(

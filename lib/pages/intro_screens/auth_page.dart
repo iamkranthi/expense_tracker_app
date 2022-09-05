@@ -16,7 +16,10 @@ class AuthPage extends StatelessWidget {
             verticalSpacer(80),
             const WelcomeText(text1: 'Almost done'),
             verticalSpacer(15),
-            const NumberWidget(number: 'OTP just sent to', text: '+91-82*******2',),
+            const NumberWidget(
+              number: 'OTP just sent to',
+              text: '+91-82*******2',
+            ),
             verticalSpacer(40),
             const Icontext(
               text1: 'Enter OTP',
@@ -27,7 +30,10 @@ class AuthPage extends StatelessWidget {
             verticalSpacer(20),
             const NumberWidget(number: 'Resend code after ', text: '1.39s'),
             verticalSpacer(60),
-            const LogButton(logs: 'VERIFY')
+            GestureDetector(
+              onTap: () => Navigator.pushNamed(context, route.homePage),
+              child: const LogButton(logs: 'VERIFY'),
+            ),
             // const OtpForm(),
           ],
         ),
@@ -41,7 +47,8 @@ class NumberWidget extends StatelessWidget {
   final String text;
   const NumberWidget({
     super.key,
-    required this.number, required this.text,
+    required this.number,
+    required this.text,
   });
 
   @override

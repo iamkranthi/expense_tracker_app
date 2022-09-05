@@ -18,11 +18,6 @@ class SignUpPage extends StatelessWidget {
               verticalSpacer(16),
               const Icontext(
                   text1: '  Start for free', icon: Iconsax.arrow_down),
-              verticalSpacer(20),
-              const LoginFieldInput(
-                hintText: 'Enter your name',
-                logicon: Iconsax.personalcard,
-              ),
               verticalSpacer(16),
               const LoginFieldInput(
                 hintText: 'Enter your mobile number',
@@ -33,11 +28,23 @@ class SignUpPage extends StatelessWidget {
                 child: PasswdInputWidget(
                   hintText: 'Create a password',
                   logicon: CupertinoIcons.lock_circle_fill,
+                  lasticon: Iconsax.password_check,
+                ),
+              ),
+              verticalSpacer(16),
+              const TextFieldContanier(
+                child: PasswdInputWidget(
+                  hintText: 'Confirm your password',
+                  logicon: CupertinoIcons.lock_circle_fill,
+                  lasticon: Iconsax.password_check,
                 ),
               ),
               verticalSpacer(20),
-              const LogButton(
-                logs: 'Sign in',
+              GestureDetector(
+                onTap: () => Navigator.pushNamed(context, route.authpage),
+                child: const LogButton(
+                  logs: 'Sign in',
+                ),
               ),
               verticalSpacer(6),
               const Text(
