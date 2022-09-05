@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'expense tracker',
       theme: lightTheme,
       onGenerateRoute: route.controller,
-      initialRoute: route.loginpage,
+      initialRoute: route.authpage,
     );
   }
 }
