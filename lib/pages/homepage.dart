@@ -22,18 +22,29 @@ class _HomepageState extends State<Homepage> {
           verticalSpacer(60),
           const CustomAppBAr(),
           verticalSpacer(25),
-          const Icontext(text1: "UPI id's ", icon: CupertinoIcons.add_circled,),
+          GestureDetector(
+            onTap: () {
+            //TODO  'Upi input page'
+            },
+            child: const Icontext(
+              text1: "UPI id's ",
+              icon: CupertinoIcons.add_circled,
+            ),
+          ),
           verticalSpacer(18),
           UpicardScroller(controller: _controller),
           verticalSpacer(10),
-          Center(child: SmoothController(controller: _controller, count: 4,)),
+          Center(
+              child: SmoothController(
+            controller: _controller,
+            count: 4,
+          )),
           verticalSpacer(25),
           const TaskBarItems(),
           verticalSpacer(28),
-       const RecentListView(),
+          const RecentListView(),
         ],
       ),
     );
   }
 }
-

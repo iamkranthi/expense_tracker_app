@@ -22,7 +22,7 @@ class TaskBarItems extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            //  TODO add expense page
+            //  TODO add income page
           },
           child: const TaskBarWidgets(
             title: 'Income',
